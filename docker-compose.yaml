@@ -14,3 +14,11 @@ services:
     volumes:
       - ./vault/logs:/vault/logs
       - ./vault/config:/vault/config
+    networks:
+      - infra
+
+networks:
+  default:
+    driver: bridge
+  infra:
+    external: true
